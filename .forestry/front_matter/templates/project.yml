@@ -27,5 +27,9 @@ fields:
   type: text
   hidden: false
   default: ''
+- type: image_gallery
+  name: dsfsdfs
+  label: dsfsdf
+  description: sfsfsf
 pages:
 - _projects/ere.md
