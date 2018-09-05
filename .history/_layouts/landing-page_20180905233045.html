@@ -56,7 +56,7 @@ layout: default
 			if(window.location.hash) {
 		var URLHash = 'URLHash';
 } else {
-	var URLHash = 5;
+	var URLHash = owl.trigger('to.owl.carousel', [5, 400]);
 }
 			var owl = $('.owl-carousel');
 			owl.owlCarousel({

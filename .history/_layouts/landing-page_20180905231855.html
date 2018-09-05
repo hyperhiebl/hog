@@ -53,11 +53,6 @@ layout: default
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 		<script>$(document).ready(function(){
-			if(window.location.hash) {
-		var URLHash = 'URLHash';
-} else {
-	var URLHash = 5;
-}
 			var owl = $('.owl-carousel');
 			owl.owlCarousel({
 				items:1,
@@ -68,7 +63,7 @@ layout: default
         margin:10,
         URLhashListener:true,
         autoplayHoverPause:true,
-        startPosition: URLHash,
+        startPosition: 'URLHash',
 		autoHeight:true
 			});
 			$(document.documentElement).keyup(function(event) {    
@@ -83,4 +78,9 @@ layout: default
 		reset();
 		removeHash();
 	})
+	if(window.location.hash) {
+		//direktlink
+} else {
+		window.location.href = "#!donata";
+}
 		  });</script>
