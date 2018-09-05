@@ -6,15 +6,22 @@ fields:
 - type: text
   name: title
   label: Title
+- type: textarea
+  name: beschreibung
+  label: Beschreibung
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: boolean
+  name: doublepage
+  label: Doppelseite
 - name: banner_image
   label: Bild
   type: file
   description: Dimensions work best at 1200 pixels by 400 pixels
   hidden: false
   default: ''
-- type: boolean
-  name: doppelseite
-  label: Doppelseite
 pages:
 - _projects/13-haikus-about-dicks.html
 - _projects/how-to-infiltrate-a-group-of-friends.html
