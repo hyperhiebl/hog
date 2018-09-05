@@ -35,3 +35,12 @@ fields:
   type: text
   hidden: true
   default: home
+- type: select
+  config:
+    source:
+      type: pages
+      section: projects
+  label: Startseite
+  name: startseite
+  description: Die Seite, die beim aufrufen von heartofgoldcomic.com als erstes angezeigt
+    werden soll
