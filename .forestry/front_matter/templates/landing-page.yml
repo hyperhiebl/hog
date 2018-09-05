@@ -3,35 +3,20 @@ label: landing-page
 hide_body: true
 is_partial: false
 fields:
-- type: text
-  label: Hero Heading
-  name: heading
-  default: ''
-- type: text
-  name: sub_heading
-  label: Hero Sub heading
-  default: ''
-- type: text
-  name: landing_film
-  label: Name of landing film
-- type: textarea
-  name: paragraph_1
-  label: Paragraph 1
-  config:
-    wysiwyg: true
-    required: true
-    schema:
-      format: html
-  description: ''
-- type: textarea
-  name: paragraph_2
-  label: Paragraph 2
-  config:
-    wysiwyg: true
-    schema:
-      format: html
 - name: layout
   label: Layout
   type: text
   hidden: true
   default: home
+- type: file
+  name: logo
+  label: Logo
+- type: select
+  config:
+    source:
+      type: pages
+      section: projects
+  label: Startseite
+  name: startseite
+  description: Die Seite, die beim aufrufen von heartofgoldcomic.com als erstes angezeigt
+    werden soll
