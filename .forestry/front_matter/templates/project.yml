@@ -51,11 +51,10 @@ fields:
   name: foto_galerie
   label: Foto Galerie
 pages:
-- _projects/mumok-doppelleben.html
-- _projects/be-aware-of-your-surroundings.html
-- _projects/selfportraits.html
-- _projects/iceland.html
-- _projects/5-seconds.html
-- _projects/mary-woke-up-today.html
-- _projects/how-to-infiltrate-a-group-of-friends.html
 - _projects/13-haikus-about-dicks.html
+- _projects/how-to-infiltrate-a-group-of-friends.html
+- _projects/mary-woke-up-today.html
+- _projects/5-seconds.html
+- _projects/iceland.html
+- _projects/be-aware-of-your-surroundings.html
+- _projects/mumok-doppelleben.html
