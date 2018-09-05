@@ -20,3 +20,9 @@ fields:
   name: startseite
   description: Die Seite, die beim aufrufen von heartofgoldcomic.com als erstes angezeigt
     werden soll
+- type: number
+  name: start_page
+  label: Start Page
+  description: Die Seite die beim aufrufen
+  config:
+    step: '1'
