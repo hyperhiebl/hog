@@ -9,7 +9,7 @@ layout: default
 <div>
 		<div class="owl-carousel">
 		{% for project in site.projects reversed %}
-		<div data-hash="!{{ project.title | slugify }}" class="{% if project.doublepage == true %}double-wrapper{% else %}single-wrapper{% endif %}">
+		<div data-hash="!{{ project.title | slugify }}" class="{% if doublepage == 'true' %}double-wrapper{% else %}single-wrapper{% endif %}">
 				<img src="{{ project.banner_image | absolute_url }}" alt="{{ project.title }}">
 			{{ project.title }}
 			</div>
