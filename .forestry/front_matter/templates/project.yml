@@ -23,6 +23,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _projects/doppelseite.html
 - _projects/page-1.html
 - _projects/13-haikus-about-dicks.html
 - _projects/how-to-infiltrate-a-group-of-friends.html
