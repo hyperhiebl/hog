@@ -3,81 +3,35 @@ label: landing-page
 hide_body: true
 is_partial: false
 fields:
-- name: title
-  label: Title
-  type: text
-  hidden: false
-  default: ''
-  config:
-    required: true
 - type: text
   label: Hero Heading
   name: heading
-  default: Belkirk College
+  default: ''
 - type: text
   name: sub_heading
   label: Hero Sub heading
-  default: Engineering and Health Sciences
-- type: file
-  name: banner_image
-  label: Hero Image
-  description: 'Dimensions: 1200px by 580px'
-  config:
-    maxSize: '2'
-- type: field_group
-  name: hero_button
-  label: Hero Button
-  fields:
-  - type: text
-    name: text
-    label: Text
-  - type: text
-    name: href
-    label: Link
+  default: ''
+- type: text
+  name: landing_film
+  label: Name of landing film
 - type: textarea
-  name: textline
-  label: Description
+  name: paragraph_1
+  label: Paragraph 1
   config:
     wysiwyg: true
     required: true
     schema:
-      format: markdown
-- name: services
-  label: Services
-  type: field_group_list
-  fields:
-  - name: heading
-    label: Heading
-    type: text
-    hidden: false
-    default: ''
-  - name: description
-    label: Description
-    type: text
-    hidden: false
-    default: ''
-  - name: icon
-    label: Icon
-    type: file
-    hidden: false
-    default: ''
-  hidden: false
-  default: ''
-- type: boolean
-  name: show_news
-  label: Show News?
-  description: Enables a news section with a twitter feed & latest posts
-- type: image_gallery
-  name: partners
-  label: Partner Logos
-- type: boolean
-  name: show_staff
-  label: Show Staff?
-  description: Enables a staff section that lists each person in the People collection
+      format: html
+  description: ''
+- type: textarea
+  name: paragraph_2
+  label: Paragraph 2
+  config:
+    wysiwyg: true
+    schema:
+      format: html
 - name: layout
   label: Layout
   type: text
   hidden: true
   default: home
-pages:
-- index.md

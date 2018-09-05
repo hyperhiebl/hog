@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+{% comment %}
+	This layout is used to generate custom landing page layouts,
+	e.g index.md and about.md
+{% endcomment %}
+<div class="heading__wrapper">
+		<div class="owl-carousel">
+		{% for project in site.projects reversed %}
+		<div data-hash="!{{ project.title | slugify }}">
+				<img src="{{ project.banner_image | absolute_url }}" alt="{{ project.title }}">
+			{{ project.title }}
+			</div>
+			{% endfor %}
+		
+		</div>
+
+		<div id="disqus_thread"></div>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+     if( typeof DISQUS != 'undefined' ) { 
+      DISQUS.reset({ 
+        reload: true, 
+         config: function () { 
+			this.page.identifier = 'http://localhost:4000/#!' + myPageID;
+       		this.page.url = 'http://example.com:4000/#!' + myPageID;
+				   console.log(this.page.url);
+         } 
+       }); 
+    } 
+	var myPageID = location.hash.substr(2);
+    var disqus_shortname = 'test-okdjndxd84'; // required: replace example with your forum shortname
+    var disqus_identifier = 'http://localhost:4000/#!' + myPageID;
+    var disqus_url = 'http://localhost:4000/#!' + myPageID;
+
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    var reset = function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+		<script>$(document).ready(function(){
+			var owl = $('.owl-carousel');
+			owl.owlCarousel({
+				items:1,
+				nav:true,
+        loop:false,
+        center:true,
+		lazyLoad: true,
+        margin:10,
+        URLhashListener:true,
+        autoplayHoverPause:true,
+        startPosition: '#!donata',
+		autoHeight:true
+			});
+			$(document.documentElement).keyup(function(event) {    
+        if (event.keyCode == 37) { /*left key*/
+            owl.trigger('prev.owl.carousel');
+        } else if (event.keyCode == 39) { /*right key*/
+            owl.trigger('next.owl.carousel');
+        }
+    });
+	owl.on('changed.owl.carousel', function(event) {
+		reset();
+	})
+		  });</script>

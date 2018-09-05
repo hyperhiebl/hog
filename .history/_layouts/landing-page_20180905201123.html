@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% comment %}
+	This layout is used to generate custom landing page layouts,
+	e.g index.md and about.md
+{% endcomment %}
+<div class="heading__wrapper">
+		<div class="owl-carousel">
+		{% for project in site.projects reversed %}
+		<div data-hash="{{ project.title | slugify }}">
+			<a href="{{ project.url | absolute_url }}">
+				<img src="{{ project.banner_image | absolute_url }}" alt="{{ project.title }}">
+			</a>{{ project.title }}
+			</div>
+			{% endfor %}
+		
+		</div>
+
+		<script>$(document).ready(function(){
+			$(".owl-carousel").owlCarousel({
+				items:1,
+				nav:true,
+        loop:false,
+        center:true,
+		lazyLoad: true,
+        margin:10,
+        URLhashListener:true,
+        autoplayHoverPause:true,
+        startPosition: '#donata'
+			});
+		  });</script>

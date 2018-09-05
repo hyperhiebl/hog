@@ -1,0 +1,36 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%;
+
+    @include respond(phone) {
+        font-size: 45%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    position: relative;
+}
+
+.social-icons {
+
+    
+
+    img {
+        height: 4rem;
+    }
+
+    a:not(:first-child) {
+        margin-left: 4rem;
+}
+
+    
+}

@@ -1,0 +1,275 @@
+
+.heading {
+
+    width: calc(100vw - 6rem);
+    max-width: 100%;
+
+    &__background {
+        background:$color-primary;
+    z-index: 1;
+    top: 0;
+    padding: 5vh 2vw;
+    width: 80vw;
+    @include respond(phone) {
+        .heading-primary {
+            display: none;
+        }
+
+        background: none;
+    padding: 0;
+    }
+    }
+    
+    &__text {
+        z-index: 5;
+        position: absolute;
+        top: 0;
+        padding: 5vh 2vw;
+        margin-top: 3rem;
+
+        @include respond(phone) {
+            padding: 2rem;
+            margin-top: 3rem;
+            max-width: 80%;
+            background: $color-primary;
+        }
+    }
+
+    &__video {
+        position: absolute;
+        z-index: 3;
+        left: 33vw;
+    margin-top: -3vw;
+
+    @include respond(tab-land) {
+        left: 5rem;
+    }
+
+    @include respond(phone) {
+        margin-top: 15rem;
+        left: 0;
+    }
+
+
+        video {
+            width:25vw;
+            height: auto;
+
+            @include respond(tab-land) {
+               width:40vw;
+            }
+
+            @include respond(phone) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.about {
+    margin-top: 20vw;
+    p {
+        font-size: 3rem;
+    }
+    @include respond(tab-land) {
+        margin-top: 30vw;
+    }
+
+    @include respond(phone) {
+        margin-top: calc(80vw + 20rem);
+    }
+}
+
+.portfolio {
+
+    text-align: center;
+    padding: 15rem 0;
+
+    @include respond(phone) {
+        padding: 6rem 0;
+    }
+    
+
+    &__filter > div {
+        display: inline-block;
+        margin: 0 4rem;
+        border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-width: 10px;
+    border-color: transparent;
+    border-radius: 200px;
+
+    @include respond(tab-land) {
+        margin: 0 1rem;
+    }
+    }
+
+    &__filter div:nth-child(1) {
+        animation: klammerUnten 5.6s step-end infinite;
+    }
+
+    &__filter div:nth-child(2) {
+        animation: klammerRechts 4.2s step-end infinite;
+    }
+
+    &__filter div:nth-child(3) {
+        animation: klammerLinks 5s step-end infinite;
+    }
+
+    &__filter div:nth-child(4) {
+        animation: klammerOben 4.6s step-end infinite;
+    }
+
+    &__filter div:nth-child(5) {
+        animation: klammerRechts 5.2s step-end infinite;
+    }
+
+    &__filter {
+        @include respond(phone) {
+        display: none;
+    }
+    }
+
+
+    span {
+        
+            color: #000;
+            font-size: 11rem;
+            line-height: .5;
+            cursor: pointer;
+
+        &:hover {
+                background: linear-gradient(90deg, #000, #fff, $color-primary, #fff, #000);
+                background-clip: border-box;
+                background-size: auto auto;
+                background-size: 1000% 1000%;
+                color: #000;
+                text-fill-color: transparent;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: Shine 10s ease infinite;
+            }
+        
+    }
+
+    &__item {
+
+        width: 44%;
+        float: left;
+        margin: 3%;
+        position: relative;
+        overflow: hidden;
+
+        @include respond(tab-land) {
+            width: 100%;
+            margin:0;
+        }
+
+        &:hover {
+            img {
+                filter: blur(30px);
+                transform: scale(1.3); 
+            }
+        }
+
+        img {
+            transition: all .2s ease-in;
+            width: 100%;
+
+        }
+    }
+
+    &__text {
+        font-size: 5rem;
+                color: #fff;
+                font-weight: normal;
+                line-height: .5;
+
+        }
+    
+    &__more {
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        font-weight: normal;
+
+        a {
+            &:link,
+            &:visited {
+                color: #fff;
+                text-decoration: none;
+            }
+            &:hover {
+                background: linear-gradient(90deg, #fff,$color-primary, #fff);
+                background-clip: border-box;
+                background-size: auto auto;
+                background-size: 1000% 1000%;
+                color: #fff;
+                text-fill-color: transparent;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: Shine 10s ease infinite;
+            }
+        }
+        @include respond(phone) {
+            display: none;
+        }
+    }
+    &__title {
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+       
+        text-align: left;
+        text-transform: uppercase;
+        width: 70%;
+        line-height: 1;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: normal;
+
+        @include respond(phone) {
+            font-size:4rem;
+            width: 100%;
+            top: 1rem;
+            left: 1rem;
+        }
+    }
+
+    &__category {
+        position: absolute;
+        bottom: 3rem;
+        left: 3rem;
+        font-weight: normal;
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+    &__download-link {
+        position: absolute;
+        bottom: 3rem;
+        right: 3rem;
+        font-weight: normal;
+
+        a {
+            font-size: 8rem;
+
+            &:link,
+            &:visited {
+                text-decoration: none;
+            }
+
+            &:hover {
+                color:#fff;
+            }
+        }
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+}
+

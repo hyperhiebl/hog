@@ -1,0 +1,115 @@
+---
+layout: default
+---
+
+{% comment %}
+	This layout is used to generate custom landing page layouts,
+	e.g index.md and about.md
+{% endcomment %}
+<div class="heading__wrapper">
+	<div class="heading">
+		<div class="heading__background">
+			<h1 class="heading-primary">
+				<br>
+				<br>
+			</h1>
+			<div class="heading__video">
+				<video autoplay loop muted playsinline poster="uploads/supergif.gif">
+					<source src="uploads/{{ page.landing_film }}" type="video/mp4" />
+					<img src="uploads/supergif.gif" title="Your browser does not support the <video> tag">
+				</video>
+			</div>
+		</div>
+		<div class="heading__text">
+			<h1 class="heading-primary">
+				{{ page.heading }}
+				<br> {{ page.sub_heading }}
+				<span id="changeText"> frontend developer</span>
+			</h1>
+		</div>
+	</div>
+</div>
+<section class="about">
+	<div class="row">
+		<div class="col-1-of-2">
+			<p>{{ page.paragraph_1 }}</p>
+		</div>
+		<div class="col-1-of-2">
+			<p>{{ page.paragraph_2 }}</p>
+			{% include social-icons.html %}
+		</div>
+	</div>
+</section>
+<section class="portfolio" id="portfolio">
+	<div class="portfolio__filter button-group filter-button-group u-margin-bottom-big">
+		<div class="portfolio__web">
+			<span data-filter=".web">WE
+				<br>&nbsp;B</span>
+		</div>
+		<div class="portfolio__film">
+			<span data-filter=".film">FI
+				<br>&nbsp;LM</span>
+		</div>
+		<div class="portfolio__poetry">
+			<span href="#" data-filter=".poetry">POE
+				<br>&nbsp;TRY</span>
+		</div>
+		<div class="portfolio__photo">
+			<span href="#" data-filter=".photos">PHO
+				<br>O
+				<br>TO</span>
+		</div>
+		<div class="portfolio__game">
+			<span href="#" data-filter=".game">GA
+				<br>ME
+			</span>
+		</div>
+	</div>
+	<div class="portfolio__masonry">
+		{% for project in site.projects reversed %}
+		<div class="portfolio__item {{ project.kategorie }} lazyload">
+			<a href="{{ project.url | absolute_url }}">
+				<img src="{{ project.banner_image | absolute_url }}" alt="{{ project.title }}">
+			</a>
+			<div class="portfolio__text">
+				<h3 class="portfolio__title">{{ project.title }}</h3>
+				<h3 class="portfolio__more">
+					<a href="{{ project.url | absolute_url }}">MO
+						<br>RE</a>
+				</h3>
+				<h3 class="portfolio__category">
+				 {% if project.kategorie == 'game' %}
+				 GA
+				 <br>ME
+				 {% endif %}
+				 {% if project.kategorie == 'poetry' %}
+				POE
+				<br>&nbsp;TRY
+				{% endif %}
+				{% if project.kategorie == 'web' %}
+				WE
+				<br>&nbsp;B
+				{% endif %}
+				{% if project.kategorie == 'photos' %}
+				PHO
+				<br>O
+				<br>TO
+				{% endif %}
+				{% if project.kategorie == 'film' %}
+				FI
+				<br>&nbsp;LM
+				{% endif %}
+				</h3>
+				{% if project.download_link != '' %}
+				<h3 class="portfolio__download-link"><a href="{{ project.download_link }}" target="_blank">
+					DOWN<br>
+					LOAD
+				</a>
+				</h3>
+				{% endif %}
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	
+	</section>

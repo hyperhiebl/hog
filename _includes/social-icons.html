@@ -1,0 +1,12 @@
+{% comment %}
+  Displays the address from _data/information.yml properly formatted
+{% endcomment %}
+
+{% assign info = site.data.information %}
+<div class="social-icons u-margin-top-small">
+<a href="https://www.facebook.com/{{ info.facebook }}" target="_blank"><img src="/uploads/facebook.svg"></a>
+
+<a href="https://www.twitter.com/{{ info.twitter }}" target="_blank"><img src="/uploads/twitter.svg"></a>
+
+<a href="mailto:{{ info.email }}" title="{{ info.email }}"><img src="/uploads/mail.svg"></a>
+</div>

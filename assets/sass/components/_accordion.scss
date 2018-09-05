@@ -1,0 +1,32 @@
+.accordion {
+  background-color: $color-primary;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.4s;
+  display: inline;
+
+  &:after {
+    content: "";
+    background: url(../img/arrow-up.svg) no-repeat bottom right;
+    background-size: cover;
+    width: 1rem;
+    height: 1rem;
+    margin-right: -1.5rem;
+    display: inline-block;
+    margin-left: .5rem;
+  }
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+
+  &__content {
+    padding: 1rem 0;
+  }
+}
+.active:after {
+  background: url(../img/arrow-down.svg) no-repeat bottom right;
+  background-size: cover;
+}

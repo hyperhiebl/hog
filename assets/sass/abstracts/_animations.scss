@@ -1,0 +1,46 @@
+@keyframes Shine {
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
+@keyframes klammerLinks {
+    from {border-left:solid 10px #FFCE2E;
+    }
+    65% {border-color:transparent;
+    }
+    to {border-left:solid 10px #FFCE2E;
+    }
+}
+
+@keyframes klammerRechts {
+    from {border-right:solid 10px #FFCE2E;
+    }
+    65% {border-color:transparent;
+    }
+    to {border-right:solid 10px #FFCE2E;
+    }
+}
+
+@keyframes klammerOben {
+    from {border-top:solid 10px #FFCE2E;
+    }
+    65% {border-color:transparent;
+    }
+    to {border-top:solid 10px #FFCE2E;
+    }
+}
+
+@keyframes klammerUnten {
+    from {border-bottom:solid 10px #FFCE2E;
+    }
+    65% {border-color:transparent;
+    }
+    to {border-bottom:solid 10px #FFCE2E;
+    }
+}

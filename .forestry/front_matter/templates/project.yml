@@ -6,30 +6,56 @@ fields:
 - type: text
   name: title
   label: Title
-- name: sub_heading
-  label: Sub Heading
+- name: download_link
+  label: Download Link
   type: text
   hidden: false
   default: ''
+- type: textarea
+  config:
+    wysiwyg: true
+    schema:
+      format: html-blocks
+    required: true
+  label: Description
+  name: content_top
 - name: banner_image
   label: Banner Image
   type: file
   description: Dimensions work best at 1200 pixels by 400 pixels
   hidden: false
   default: ''
-- name: tags
-  label: Tags
-  type: tag_list
-  hidden: false
-  default: []
 - name: slug
   label: Slug
   type: text
   hidden: false
   default: ''
+- type: select
+  name: kategorie
+  config:
+    source:
+      type: datafiles
+      file: _data-categories-yml
+  label: Kategorie
+  default: ''
 - type: image_gallery
-  name: dsfsdfs
-  label: dsfsdf
-  description: sfsfsf
+  name: galerie
+  label: Galerie
+- type: text
+  name: video
+  label: Video Link
+- type: text
+  label: Vimeo Link
+  name: vimeo
+- type: image_gallery
+  name: foto_galerie
+  label: Foto Galerie
 pages:
-- _projects/ere.md
+- _projects/mumok-doppelleben.html
+- _projects/be-aware-of-your-surroundings.html
+- _projects/selfportraits.html
+- _projects/iceland.html
+- _projects/5-seconds.html
+- _projects/mary-woke-up-today.html
+- _projects/how-to-infiltrate-a-group-of-friends.html
+- _projects/13-haikus-about-dicks.html

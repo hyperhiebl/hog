@@ -1,9 +1,11 @@
-phone: "+1 929 391 0976"
-email: info@belkirkcollege.com
-address_1: 500 University Ave
-address_2: ''
-city: New York
-state: NY
-postal_code: 10006
-country: US
-twitter: forestryio
+---
+email: hello@sarhie.net
+address_1: ''
+city: Wien
+postal_code: ''
+twitter: hyperhiebl
+facebook: im9today
+country: Österreich
+sentence: This site is hosted on <a href="https://uberspace.de/" target="_blank">uberspace</a>
+  and built with <a href="https://jekyllrb.com/" target="_blank">jekyll</a> and <a
+  href="https://forestry.io/" target="_blank">forestry.io</a> ❤️
