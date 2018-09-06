@@ -14,7 +14,7 @@ sections:
   - default
 - type: directory
   path: _projects
-  label: Projects
+  label: Comic Pages
   create: all
   match: "*"
   templates:
