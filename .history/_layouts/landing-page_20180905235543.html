@@ -7,50 +7,17 @@ layout: default
 	e.g index.md and about.md
 {% endcomment %}
 <div>
-	<div class="grey-left"><div class="clear"><p>Chapter</p></div><div class="inner"><ul>{% for project in site.projects %}
-		
-			<li>
-			<a href="#!{{ project.title | slugify }}">{{ project.title }}</a>
-		</li>
-		
-			{% endfor %}</ul></div></div>
-	<div class="grey-right"><p>About</p></div>
 		<div class="owl-carousel">
-		{% for project in site.projects %}
+		{% for project in site.projects reversed %}
 		<div data-hash="!{{ project.title | slugify }}" class="{% if project.doublepage == true %}double-wrapper{% else %}single-wrapper{% endif %}">
-				<img class="owl-lazy" data-src="{{ project.banner_image | absolute_url }}" alt="{{ project.title }}">
+				<img src="{{ project.banner_image | absolute_url }}" alt="{{ project.title }}">
 			{{ project.title }}
 			</div>
 			{% endfor %}
 		
 		</div>
 
-		<div class="nav-first-last">
-
-		{% for project in site.projects limit:1 %}
-<a href="#!{{ project.title | slugify }}">First</a>
-{% endfor %}
-
-{% for project in site.projects %}
-{% if forloop.last %}
-<a href="#!{{ project.title | slugify }}" class="nav-last">Last</a>
-{% endif %}
-{% endfor %}
-
-</div>
-
 		<div id="disqus_thread"></div>
-		<script>
-		var section = $(".grey-left").height();
-		var win = $(window).height();
-
-$('.grey-left').click(function(){
-    jQuery(this).toggleClass('grey-left-open');
-    if (section > win ) {
-        $(".grey-left").toggleClass('grey-left-scroll');
-    }
-});
-</script>
 		<script>function removeHash () { 
 				history.pushState("", document.title, window.location.pathname + window.location.search);
 			}</script>
@@ -60,8 +27,8 @@ $('.grey-left').click(function(){
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 	var myPageID = location.hash.substr(2);
     var disqus_shortname = 'test-okdjndxd84';
-    var disqus_identifier = "http://localhost:4000/#!{{ page.startseite | remove:'_projects/' | remove:'.html' }}";
-    var disqus_url = "http://localhost:4000/#!{{ page.startseite | remove:'_projects/' | remove:'.html' }}";
+    var disqus_identifier = 'http://localhost:4000/#!{{ page.startseite | slice: 1, 12 }}';
+    var disqus_url = 'http://localhost:4000/#!{{ page.startseite | slice: -3, 3 }}';
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -113,13 +80,8 @@ $('.grey-left').click(function(){
     });
 	owl.on('changed.owl.carousel', function(event) {
 		console.log("changed" + location.hash.substr(2));
+		console.log("TEST" + "{{ page.startseite | slice: 6, }}");
 		reset();
 		removeHash();
 	})
-
-	$('.owl-lazy').click(function () {
-    owl.trigger('next.owl.carousel');
-});
-		  });
-		  
-		  </script>
+		  });</script>

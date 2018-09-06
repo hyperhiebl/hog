@@ -1,0 +1,17 @@
+{% comment %}
+  Displays the address from _data/information.yml properly formatted
+{% endcomment %}
+
+<footer class="footer">
+{% assign info = site.data.information %}
+<p>
+  <strong>imprint & contact</strong><br>
+  Sarah Hiebl ● 
+  {% if info.address_1 %}{{ info.address_1 }}  {% endif %}
+  {{ info.city }}, {{ info.country }} ●
+  {% if info.email %}<a href="mailto:{{ info.email }}" title="{{ info.email }}">{{ info.email }}</a>{% endif %}<br>
+  {{ info.sentence }}
+  {% include social-icons.html %}
+
+</p>
+</footer>

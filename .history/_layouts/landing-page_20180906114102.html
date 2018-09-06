@@ -7,13 +7,9 @@ layout: default
 	e.g index.md and about.md
 {% endcomment %}
 <div>
-	<div class="grey-left"><div class="clear"><p>Chapter</p></div><div class="inner"><ul>{% for project in site.projects %}
-		
-			<li>
-			<a href="#!{{ project.title | slugify }}">{{ project.title }}</a>
-		</li>
-		
-			{% endfor %}</ul></div></div>
+	<div class="grey-left"><div class="clear"><p>Chapter</p></div><div class="inner">{% for project in site.projects %}
+			<a href="#!{{ project.title | slugify }}">First</a>
+			{% endfor %}</div></div>
 	<div class="grey-right"><p>About</p></div>
 		<div class="owl-carousel">
 		{% for project in site.projects %}

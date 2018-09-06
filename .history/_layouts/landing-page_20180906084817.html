@@ -7,50 +7,21 @@ layout: default
 	e.g index.md and about.md
 {% endcomment %}
 <div>
-	<div class="grey-left"><div class="clear"><p>Chapter</p></div><div class="inner"><ul>{% for project in site.projects %}
-		
-			<li>
-			<a href="#!{{ project.title | slugify }}">{{ project.title }}</a>
-		</li>
-		
-			{% endfor %}</ul></div></div>
-	<div class="grey-right"><p>About</p></div>
 		<div class="owl-carousel">
 		{% for project in site.projects %}
 		<div data-hash="!{{ project.title | slugify }}" class="{% if project.doublepage == true %}double-wrapper{% else %}single-wrapper{% endif %}">
-				<img class="owl-lazy" data-src="{{ project.banner_image | absolute_url }}" alt="{{ project.title }}">
+				<img src="{{ project.banner_image | absolute_url }}" alt="{{ project.title }}">
 			{{ project.title }}
 			</div>
 			{% endfor %}
 		
 		</div>
 
-		<div class="nav-first-last">
-
 		{% for project in site.projects limit:1 %}
-<a href="#!{{ project.title | slugify }}">First</a>
+<a href="#!{{ project.title | slugify }}">Last</a>
 {% endfor %}
-
-{% for project in site.projects %}
-{% if forloop.last %}
-<a href="#!{{ project.title | slugify }}" class="nav-last">Last</a>
-{% endif %}
-{% endfor %}
-
-</div>
 
 		<div id="disqus_thread"></div>
-		<script>
-		var section = $(".grey-left").height();
-		var win = $(window).height();
-
-$('.grey-left').click(function(){
-    jQuery(this).toggleClass('grey-left-open');
-    if (section > win ) {
-        $(".grey-left").toggleClass('grey-left-scroll');
-    }
-});
-</script>
 		<script>function removeHash () { 
 				history.pushState("", document.title, window.location.pathname + window.location.search);
 			}</script>
@@ -116,10 +87,4 @@ $('.grey-left').click(function(){
 		reset();
 		removeHash();
 	})
-
-	$('.owl-lazy').click(function () {
-    owl.trigger('next.owl.carousel');
-});
-		  });
-		  
-		  </script>
+		  });</script>

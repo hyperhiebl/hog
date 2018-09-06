@@ -34,8 +34,6 @@
 }
 
 .inner {
-    text-align: left;
-    width: 9rem;
     margin-right: 8rem;
 }
 
@@ -68,7 +66,7 @@
 
 .grey-left {
     left: 0;
-    transform: translateX(-12rem);
+    transform: translateX(-8rem);
     &-open {
         transform: translateX(0);
     }

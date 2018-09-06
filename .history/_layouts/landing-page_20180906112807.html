@@ -7,13 +7,7 @@ layout: default
 	e.g index.md and about.md
 {% endcomment %}
 <div>
-	<div class="grey-left"><div class="clear"><p>Chapter</p></div><div class="inner"><ul>{% for project in site.projects %}
-		
-			<li>
-			<a href="#!{{ project.title | slugify }}">{{ project.title }}</a>
-		</li>
-		
-			{% endfor %}</ul></div></div>
+	<div class="grey-left"><div class="clear"><p>Chapter</p></div><div><a href="#Chapter">Chapter 1</a></div></div>
 	<div class="grey-right"><p>About</p></div>
 		<div class="owl-carousel">
 		{% for project in site.projects %}
@@ -40,17 +34,6 @@ layout: default
 </div>
 
 		<div id="disqus_thread"></div>
-		<script>
-		var section = $(".grey-left").height();
-		var win = $(window).height();
-
-$('.grey-left').click(function(){
-    jQuery(this).toggleClass('grey-left-open');
-    if (section > win ) {
-        $(".grey-left").toggleClass('grey-left-scroll');
-    }
-});
-</script>
 		<script>function removeHash () { 
 				history.pushState("", document.title, window.location.pathname + window.location.search);
 			}</script>

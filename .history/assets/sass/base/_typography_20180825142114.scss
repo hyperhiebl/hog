@@ -1,0 +1,132 @@
+body {
+    font-family: Josefin Sans;
+    line-height: 1.7;
+    padding: 3rem;
+}
+
+.heading-primary {
+    font-size: 7vw;
+    margin: 0;
+    font-weight: normal;
+    line-height: 1;
+    color: #fff;
+
+    @include respond(phone) {
+        max-width: 80%;
+        font-size: 4rem;
+    }
+  }
+
+  .heading-secondary {
+    font-size: 8rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+
+  .home-link {
+
+    text-align: center;
+
+    a {
+    &:link,
+    &:visited {
+    font-size: 8rem;
+    color: #000;
+            font-weight: normal;
+            line-height: .5;
+            text-decoration: none;
+
+    }
+
+    &:hover {
+        background: linear-gradient(90deg, #000,$color-primary, #000);
+                background-clip: border-box;
+                background-size: auto auto;
+                background-size: 1000% 1000%;
+                color: #fff;
+                text-fill-color: transparent;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: Shine 10s ease infinite;
+    }
+}
+}
+
+  a {
+      &:link,
+      &:visited {
+          color: $color-primary;
+      }
+  }
+
+
+
+
+  @font-face {
+    font-family: 'Josefin Bold';
+    src: url('../fonts/josefinsans-bold-webfont.woff2') format('woff2'),
+         url('../fonts/josefinsans-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Josefin Bold';
+    src: url('../fonts/josefinsans-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/josefinsans-bolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/josefinsans-italic-webfont.woff2') format('woff2'),
+         url('../fonts/josefinsans-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/josefinsans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/josefinsans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Josefin Semibold';
+    src: url('../fonts/josefinsans-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/josefinsans-semibold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Josefin Semibold';
+    src: url('../fonts/josefinsans-semibolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/josefinsans-semibolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+
+}

@@ -34,9 +34,7 @@
 }
 
 .inner {
-    text-align: left;
-    width: 9rem;
-    margin-right: 8rem;
+    margin-right: 4rem;
 }
 
 .nav-last {
@@ -68,7 +66,7 @@
 
 .grey-left {
     left: 0;
-    transform: translateX(-12rem);
+    transform: translateX(-5rem);
     &-open {
         transform: translateX(0);
     }

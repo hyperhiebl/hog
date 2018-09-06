@@ -21,22 +21,11 @@
 
 .nav-first-last {
     top: 60vh;
-    z-index:10;
+    z-index:999;
 
     a {
         position: absolute;
     }
-}
-
-.clear {
-    right: 0;
-    position: absolute;
-}
-
-.inner {
-    text-align: left;
-    width: 9rem;
-    margin-right: 8rem;
 }
 
 .nav-last {
@@ -51,30 +40,7 @@
 .grey-left, .grey-right {
     position: fixed;
     height: 100vh;
-    background: #ccc;
-    text-align: center;
-    bottom: 0;
-    top: 0;
-    z-index: 999;
     p {
-        transform: rotate(-90deg);
-        margin-top: 50vh;
+        transform: rotate(-90deg)
     }
-}
-
-.grey-right {
-    right: 0;
-}
-
-.grey-left {
-    left: 0;
-    transform: translateX(-12rem);
-    &-open {
-        transform: translateX(0);
-    }
-}
-
-#disqus_thread {
-    max-width: 40vw;
-    margin: auto;
 }
