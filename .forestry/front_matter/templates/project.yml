@@ -16,6 +16,9 @@ fields:
 - type: boolean
   name: doublepage
   label: Doppelseite
+- type: boolean
+  name: chapter
+  label: Ist ein Chapter?
 - name: banner_image
   label: Bild
   type: file
