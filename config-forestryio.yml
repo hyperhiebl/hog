@@ -1,0 +1,20 @@
+---
+title: sarahis.cool
+short_title: sarahhiebl
+description: Sarah is cool
+baseurl: 
+permalink: "/:path/"
+defaults:
+- scope:
+    path: ''
+  values:
+    layout: page
+collections:
+  projects:
+    output: true
+    permalink: "/projects/:path/"
+gems:
+- jekyll-menus
+- jekyll-feed
+- jekyll-archives
+timezone: Etc/UTC
