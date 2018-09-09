@@ -26,6 +26,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _projects/page-125.html
 - _projects/page-124.html
 - _projects/page-123.html
 - _projects/page-122.html
