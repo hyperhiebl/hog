@@ -26,6 +26,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _projects/page-123.html
 - _projects/page-122.html
 - _projects/page-3.html
 - _projects/doppelseite.html
