@@ -26,10 +26,12 @@ fields:
   hidden: false
   default: ''
 pages:
+- _projects/page-140.html
+- _projects/page-139.html
+- _projects/page-135.html
 - _projects/page-138.html
 - _projects/page-137.html
 - _projects/page-136.html
-- _projects/page-135.html
 - _projects/page-134.html
 - _projects/page-133.html
 - _projects/page-132.html
