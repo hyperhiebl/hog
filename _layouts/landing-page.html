@@ -96,12 +96,12 @@ $('.grey-left').click(function(){
 			owl.owlCarousel({
 				items:1,
 				nav:true,
+				autoplay:false,
         loop:false,
         center:true,
 		lazyLoad: true,
         margin:10,
         URLhashListener:true,
-        autoplayHoverPause:true,
         startPosition: URLHash,
 		autoHeight:true
 			});
@@ -117,10 +117,6 @@ $('.grey-left').click(function(){
 		reset();
 		removeHash();
 	})
-
-	$('.owl-lazy').click(function () {
-    owl.trigger('next.owl.carousel');
-});
 		  });
 		  
 		  </script>
