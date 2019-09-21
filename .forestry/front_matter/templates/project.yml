@@ -24,6 +24,12 @@ fields:
   description: Dimensions work best at 1200 pixels by 400 pixels
   hidden: false
   default: ''
+- name: chapter_bg
+  type: file
+  config:
+    maxSize: 250
+  label: Chapter Hintergrundbild
+  description: Falls Chapter dann Hintergrundbild
 pages:
 - _projects/page-125.html
 - _projects/page-127.html
