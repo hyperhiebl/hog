@@ -26,14 +26,15 @@
 
 <div class="splash-landing" id="splashscreen">
 	<div class="splash-landing-content">
-		<span class="btn btn-acts"><a href="#">Act I</a><a href="#">Act II</a></span><br>
+		<div class="btn btn-splash btn-acts">
+			<div class="btn-center"><a href="#">Act I</a><a class="btn-right" href="#">Act II</a></div></div><br>
 			
-<a class="btn" href="#!page-1" onClick="SetCookie('splashscreen','false','365')">
-					Latest page??</a>
+<div class="btn btn-splash"><div class="btn-center"><a href="#!page-1" onClick="SetCookie('splashscreen','false','365')">
+					Latest page??</a></div></div>
 					
-<label class="container">One
+<br><label class="container">
 	<input type="checkbox" id="cookieCheck" checked="checked">
-	<span class="checkmark"></span>
+	<span class="checkmark">Always bring me to latest page</span>
   </label>
 </div>
 </div>
@@ -502,7 +503,10 @@ $('.grey-left').click(function(){
 $(document).ready(function(){  
 
 	if (document.cookie.match(/^(.*;)?\s*splashscreen\s*=\s*[^;]+(.*)?$/)) {
-		document.getElementById("splashscreen").style.display=" none";
+		document.getElementById("splashscreen").style.display="none";
+}
+else {
+	document.getElementById("splashscreen").style.display="block";
 }
 
 });

@@ -290,7 +290,8 @@ p, a {
   background-image: url(/assets/imgs/loadinglogo.gif);
   background-repeat: no-repeat;
   background-size: 15%;
-  background-position: center 30vh; }
+  background-position: center;
+  min-height: 40vh; }
 
 .carousel-nav {
   width: 6rem; }
@@ -307,21 +308,43 @@ p, a {
   background-color: rgba(0, 0, 0, 0.9);
   width: 100vw;
   height: 100vh;
-  z-index: 999999; }
+  z-index: 999999;
+  display: none;
+  text-align: center; }
   .splash-landing .btn {
-    color: var(--main-bg-color); }
+    color: var(--main-bg-color);
+    padding: 5rem 10rem; }
   .splash-landing .btn-acts {
-    background: url("/assets/imgs/act-selection.svg"); }
+    color: var(--main-bg-color);
+    background: url("/assets/imgs/act-selection.svg");
+    height: 13rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat; }
+  .splash-landing .btn-right {
+    margin-left: 14rem; }
+  .splash-landing .btn-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
   .splash-landing a {
-    font-size: 4rem;
-    text-decoration: none; }
+    font-size: 3rem;
+    text-decoration: none;
+    color: var(--main-bg-color); }
+
+.btn-splash {
+  width: 100%;
+  height: 10rem;
+  padding: 0;
+  position: relative; }
 
 .splash-landing-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 4rem; }
+  font-size: 3rem;
+  width: 100%; }
 
 .project__img {
   width: 25%;
