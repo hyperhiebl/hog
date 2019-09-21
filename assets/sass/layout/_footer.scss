@@ -1,11 +1,5 @@
 .footer {
-    p {
-    font-size: 2rem; 
-    }
-    padding: 20rem 0 0rem;
-
-    @include respond(tab-port) {
-        padding: 5rem 0 0;
-    }
+    text-align: center;
+    margin-top: 10rem;
 
 }

@@ -10,7 +10,7 @@ layout: default
 	<div class="grey-left"><div class="clear"><p>Chapter</p></div><div class="inner"><ul>{% for project in site.projects %}
 			{% if project.chapter == true %}
 			<li>
-			<a href="#!{{ project.title | slugify }}">{{ project.title }}</a>
+			<a href="#!{{ project.title | slugify }}"><img class="chapter-bg" src="{{ project.chapter_bg | absolute_url }}" alt="{{ project.title }}"></a>
 		</li>
 		{% endif %}
 		
@@ -20,7 +20,10 @@ layout: default
 		{% for project in site.projects %}
 		<div data-hash="!{{ project.title | slugify }}" class="{% if project.doublepage == true %}double-wrapper{% else %}single-wrapper{% endif %}">
 				<img class="owl-lazy" data-src="{{ project.banner_image | absolute_url }}" alt="{{ project.title }}">
-			{{ project.title }}
+			<div class="page-content">
+				<h2>{{ project.title }}</h2>
+			<p>{{ project.beschreibung }}</p>
+		</div>
 			</div>
 			{% endfor %}
 		

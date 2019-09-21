@@ -18,4 +18,11 @@ html {
 body {
     box-sizing: border-box;
     position: relative;
+    background-color: var(--main-bg-color);
+    font-family: var(--main-font-family);
+    color: var(--text-color);
+}
+
+a:link, a:visited {
+    color: var(--main-link-color);
 }
