@@ -208,8 +208,8 @@ p, a {
   margin: auto; }
 
 .owl-nav, .nav-first-last {
-  position: absolute;
-  top: 40vh;
+  position: fixed;
+  top: 50vh;
   width: 65vw;
   margin: auto;
   left: 0;
@@ -299,7 +299,7 @@ p, a {
   width: 6rem; }
 
 .owl-prev, .owl-next {
-  width: 3rem; }
+  width: 4rem; }
 
 #disqus_thread {
   max-width: 40vw;
