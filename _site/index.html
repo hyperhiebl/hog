@@ -122,7 +122,9 @@
 			
 		
 			</ul></div></div>
-	<div class="grey-right"><p>About</p></div>
+	<div class="grey-right"><div class="clear-left"><p>About</p></div><div class="inner inner-right">
+		<span>Abouuut</span>
+	</div></div>
 	<header class="header"><img src="/assets/imgs/logo.svg"><br>
 		<a class="btn" href="#" target="_blank">Bonus Content on Patreon</a>
 	
@@ -408,11 +410,19 @@
 		<script>
 		var section = $(".grey-left").height();
 		var win = $(window).height();
+		var sectionright = $(".grey-right").height();
 
 $('.grey-left').click(function(){
     jQuery(this).toggleClass('grey-left-open');
     if (section > win ) {
         $(".grey-left").toggleClass('grey-left-scroll');
+    }
+});
+
+$('.grey-right').click(function(){
+    jQuery(this).toggleClass('grey-right-open');
+    if (sectionright > win ) {
+        $(".grey-right").toggleClass('grey-left-scroll');
     }
 });
 </script>
