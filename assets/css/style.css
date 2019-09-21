@@ -233,7 +233,8 @@ p, a {
   text-align: center;
   bottom: 0;
   top: 0;
-  z-index: 999; }
+  z-index: 999;
+  cursor: pointer; }
   .grey-left p, .grey-right p {
     font-size: var(--medium-font-size);
     transform: rotate(-90deg);
