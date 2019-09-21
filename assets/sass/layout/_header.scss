@@ -1,0 +1,13 @@
+.header {
+    text-align: center;
+    margin: 0 0 5rem;
+    img {
+        max-width: 20vw;
+        margin-bottom: 2rem;
+    }
+
+    a:link, a:visited {
+        color: var(--main-bg-color);
+        text-decoration: none;
+    }
+}

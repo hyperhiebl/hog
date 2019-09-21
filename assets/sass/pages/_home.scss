@@ -11,7 +11,7 @@
 .owl-nav, .nav-first-last {
     position: absolute;
     top: 40vh;
-    width: 80vw;
+    width: 65vw;
     margin: auto;
     left: 0;
     right: 0;
@@ -111,7 +111,17 @@
     background-repeat: no-repeat;
     background-size: 15%;
     background-position: center 30vh;
+
     }
+
+.carousel-nav {
+    width: 6rem;
+}
+
+.owl-prev, .owl-next {
+    width:3rem;
+} 
+
 
 #disqus_thread {
     max-width: 40vw;

@@ -109,6 +109,10 @@
 		
 			</ul></div></div>
 	<div class="grey-right"><p>About</p></div>
+	<header class="header"><img src="/assets/imgs/logo.svg"><br>
+		<a class="btn" href="#" target="_blank">Bonus Content on Patreon</a>
+	
+	</header>
 		<div class="owl-carousel">
 		
 		<div data-hash="!page-1" class="single-wrapper">
@@ -325,7 +329,7 @@
 		<div class="nav-first-last">
 
 		
-<a href="#!page-1">First</a>
+<a class="carousel-nav" href="#!page-1"><img src="/assets/imgs/arrowfirst.svg"></a>
 
 
 
@@ -380,7 +384,7 @@
 
 
 
-<a href="#!page-145" class="nav-last">Last</a>
+<a href="#!page-145" class="nav-last carousel-nav"><img src="/assets/imgs/arrowlatest.svg"></a>
 
 
 
@@ -449,7 +453,8 @@ $('.grey-left').click(function(){
         margin:10,
         URLhashListener:true,
 		startPosition: URLHash,
-		autoHeight:true
+		autoHeight:true,
+		navText: ["<img src='/assets/imgs/arrowback.svg'>","<img src='/assets/imgs/arrowforward.svg'>"]
 			});
 			$(document.documentElement).keyup(function(event) {    
         if (event.keyCode == 37) { /*left key*/

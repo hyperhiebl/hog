@@ -16,6 +16,10 @@ layout: default
 		
 			{% endfor %}</ul></div></div>
 	<div class="grey-right"><p>About</p></div>
+	<header class="header"><img src="/assets/imgs/logo.svg"><br>
+		<a class="btn" href="#" target="_blank">Bonus Content on Patreon</a>
+	
+	</header>
 		<div class="owl-carousel">
 		{% for project in site.projects %}
 		<div data-hash="!{{ project.title | slugify }}" class="{% if project.doublepage == true %}double-wrapper{% else %}single-wrapper{% endif %}">
@@ -32,12 +36,12 @@ layout: default
 		<div class="nav-first-last">
 
 		{% for project in site.projects limit:1 %}
-<a href="#!{{ project.title | slugify }}">First</a>
+<a class="carousel-nav" href="#!{{ project.title | slugify }}"><img src="/assets/imgs/arrowfirst.svg"></a>
 {% endfor %}
 
 {% for project in site.projects %}
 {% if forloop.last %}
-<a href="#!{{ project.title | slugify }}" class="nav-last">Last</a>
+<a href="#!{{ project.title | slugify }}" class="nav-last carousel-nav"><img src="/assets/imgs/arrowlatest.svg"></a>
 {% endif %}
 {% endfor %}
 
@@ -106,7 +110,8 @@ $('.grey-left').click(function(){
         margin:10,
         URLhashListener:true,
 		startPosition: URLHash,
-		autoHeight:true
+		autoHeight:true,
+		navText: ["<img src='/assets/imgs/arrowback.svg'>","<img src='/assets/imgs/arrowforward.svg'>"]
 			});
 			$(document.documentElement).keyup(function(event) {    
         if (event.keyCode == 37) { /*left key*/
