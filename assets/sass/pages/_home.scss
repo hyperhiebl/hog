@@ -127,3 +127,26 @@
     max-width: 40vw;
     margin: auto;
 }
+
+.splash-landing {
+    position: fixed;
+    background-color:rgba(0,0,0,.9);
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    .btn {
+        color:var(--main-bg-color);
+    } 
+    .btn-acts {
+        background: url('/assets/imgs/act-selection.svg');
+    }
+    a {
+        font-size: 4rem;
+        text-decoration: none;
+    }
+}
+
+.splash-landing-content {
+    @include absCenter;
+    font-size: 4rem;
+}

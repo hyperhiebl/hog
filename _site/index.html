@@ -24,6 +24,19 @@
 <body>
 
 
+<div class="splash-landing" id="splashscreen">
+	<div class="splash-landing-content">
+		<span class="btn btn-acts"><a href="#">Act I</a><a href="#">Act II</a></span><br>
+			
+<a class="btn" href="#!page-1" onClick="SetCookie('splashscreen','false','365')">
+					Latest page??</a>
+					
+<label class="container">One
+	<input type="checkbox" id="cookieCheck" checked="checked">
+	<span class="checkmark"></span>
+  </label>
+</div>
+</div>
 <div>
 	<div class="grey-left"><div class="clear"><p>Chapter</p></div><div class="inner"><ul>
 			
@@ -471,6 +484,30 @@ $('.grey-left').click(function(){
 		  });
 		  
 		  </script>
+
+		  <script>function SetCookie(c_name,value,expiredays)
+				{
+					if (document.getElementById("cookieCheck").checked == true) {
+					var exdate=new Date()
+					exdate.setDate(exdate.getDate()+expiredays)
+					document.cookie=c_name+ "=" +escape(value)+
+					((expiredays==null) ? "" : ";expires="+exdate.toGMTString());
+					console.log("cookie set!");
+				}
+				document.getElementById("splashscreen").style.display=" none";
+				}
+			</script>
+			
+<script>
+$(document).ready(function(){  
+
+	if (document.cookie.match(/^(.*;)?\s*splashscreen\s*=\s*[^;]+(.*)?$/)) {
+		document.getElementById("splashscreen").style.display=" none";
+}
+
+});
+
+</script>
 
 
 

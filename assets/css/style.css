@@ -97,9 +97,6 @@ a:link, a:visited {
   padding: 4rem 5rem;
   background-size: 100% 100%; }
 
-body {
-  padding: 3rem; }
-
 p, a {
   font-size: 1.6rem; }
 
@@ -304,6 +301,27 @@ p, a {
 #disqus_thread {
   max-width: 40vw;
   margin: auto; }
+
+.splash-landing {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999; }
+  .splash-landing .btn {
+    color: var(--main-bg-color); }
+  .splash-landing .btn-acts {
+    background: url("/assets/imgs/act-selection.svg"); }
+  .splash-landing a {
+    font-size: 4rem;
+    text-decoration: none; }
+
+.splash-landing-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem; }
 
 .project__img {
   width: 25%;
