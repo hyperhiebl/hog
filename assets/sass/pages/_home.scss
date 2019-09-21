@@ -150,6 +150,9 @@
 
 .btn-right {
     margin-left: 14rem;
+    @include respond(phone) {
+        margin:0;
+    }
 }
 
 .btn-center {

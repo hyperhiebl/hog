@@ -322,6 +322,9 @@ p, a {
     background-repeat: no-repeat; }
   .splash-landing .btn-right {
     margin-left: 14rem; }
+    @media only screen and (max-width: 37.5em) {
+      .splash-landing .btn-right {
+        margin: 0; } }
   .splash-landing .btn-center {
     position: absolute;
     top: 50%;
