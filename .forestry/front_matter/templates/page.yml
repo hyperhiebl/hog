@@ -6,7 +6,7 @@ fields:
 - type: text
   name: title
   label: title
-- name: content
+- name: content_field
   type: textarea
   default: ''
   config:
