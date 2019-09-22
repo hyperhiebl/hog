@@ -4,37 +4,5 @@ layout: default
 {% comment %}
     A general page layout. Used by default for all content on the site.
 {% endcomment %}
-<div class="home-link u-margin-top-medium u-margin-bottom-medium">
-<a href="/#portfolio">BACK</a></div>
-<section class="project">
-    <div class="project__gallery">
-{% for image in page.galerie %}
-<div class="project__img" style="background-image:url({{ image | relative_url }});">
-</div>
-  {% endfor %}
-</div>
-<div class="project__photo-gallery">
-        {% for image in page.foto_galerie %}
-        <img src="{{ image | relative_url }}">
-          {% endfor %}
-</div>
-</div>
-<div class="project__content">
-            <h2 class="heading-secondary u-margin-top-medium u-margin-bottom-medium">{{ page.title }}</h2>
-            {{ page.content_top }}
-            {% if page.download_link != '' %}
-            <p>
-            <a href="{{ page.download_link }}" target="blank">Download</a></p>
-            {% endif %}
-        </div>
-        {% if page.video != '' or page.vimeo != '' %}
-        <div class="project__video u-margin-top-medium">
-            {% if page.video != '' %}
-        <div class="video-container"><iframe width="853" height="480" src="{{ page.video }}" frameborder="0" allowfullscreen</iframe</div></iframe>
-    </div>
-    {% else %}
-    <div class='embed-container'><iframe src='{{ page.vimeo }}' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-    {% endif %}
-    </div>
-    {% endif %}
-        </section>
+
+{{ page.content }}
