@@ -4,5 +4,12 @@ layout: default
 {% comment %}
     A general page layout. Used by default for all content on the site.
 {% endcomment %}
+<header class="header"><a href="/"><img src="/assets/imgs/logo.svg"></a><br>
+    <a class="btn" href="https://www.patreon.com/heartofgoldcomic" target="_blank">Bonus Content on Patreon</a>
 
-{{ page.content }}
+</header>
+<main class="default-page">
+<h1>{{ page.title }}</h1>
+{{ page.content_field }}
+
+</main>

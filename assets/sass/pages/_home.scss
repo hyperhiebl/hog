@@ -253,3 +253,14 @@
         color: var(--text-color);
     }
 }
+
+.default-page {
+    max-width: 97rem;
+    margin:auto;
+
+    h1 {
+        text-align: center;
+        font-size: 4rem;
+        font-family: var(--head-font-family);
+    }
+}
