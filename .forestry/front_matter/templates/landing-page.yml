@@ -25,3 +25,33 @@ fields:
   description: Die Seite die beim aufrufen
   config:
     step: '1'
+- name: about
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: about
+- name: story
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: story
+- name: promo
+  type: text
+  config:
+    required: false
+  label: promo
+- name: show_promo
+  type: boolean
+  label: show promo?
+- name: social_media_icons
+  type: image_gallery
+  config: {}
+  label: social media icons
