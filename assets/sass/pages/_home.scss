@@ -61,7 +61,7 @@
 .inner-right {
     margin-right: 0;
     margin-left:8rem;
-    width: 60vw;
+    width: 60rem;
     font-size: var(--main-font-size);
 }
 
@@ -113,13 +113,13 @@
 
 .grey-right {
     right: 0;
-    transform: translateX(60vw);
+    transform: translateX(60rem);
     @include respond(phone) {
         transform: translateX(22rem);
     }
     &-open {
         transform: translateX(0);
-        background: linear-gradient(to left, #191921 0%, #191921 90%, rgba(25, 25, 33, 0) 100%);}
+        background: linear-gradient(to left, #191921 0%, #191921 60rem, rgba(25, 25, 33, 0) 100%);}
 }
 
 .grey-left {
