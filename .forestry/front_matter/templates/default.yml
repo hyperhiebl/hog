@@ -24,5 +24,4 @@ fields:
   hidden: true
   default: post
 pages:
-- imprint.html
 - privacy-policy.html
