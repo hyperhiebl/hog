@@ -28,8 +28,11 @@ fields:
   type: file
   config:
     maxSize: 250
-  label: Chapter Hintergrundbild
+  label: Chapter Bild
   description: Falls Chapter dann Hintergrundbild
+  showOnly:
+    field: chapter
+    value: true
 pages:
 - _projects/page-5.html
 - _projects/page-4.html
