@@ -31,6 +31,7 @@ fields:
   label: Chapter Hintergrundbild
   description: Falls Chapter dann Hintergrundbild
 pages:
+- _projects/page-4.html
 - _projects/page-03.html
 - _projects/page-3.html
 - _projects/page-1.html
