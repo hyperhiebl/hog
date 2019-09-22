@@ -18,12 +18,6 @@ fields:
 - type: boolean
   name: chapter
   label: Ist ein Chapter?
-- name: banner_image
-  label: Bild
-  type: file
-  description: Dimensions work best at 1200 pixels by 400 pixels
-  hidden: false
-  default: ''
 - name: chapter_bg
   type: file
   config:
@@ -33,6 +27,12 @@ fields:
   showOnly:
     field: chapter
     value: true
+- name: banner_image
+  label: Bild
+  type: file
+  description: Dimensions work best at 1200 pixels by 400 pixels
+  hidden: false
+  default: ''
 pages:
 - _projects/page-5.html
 - _projects/page-4.html
