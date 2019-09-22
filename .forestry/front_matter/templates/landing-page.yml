@@ -58,3 +58,5 @@ fields:
   showOnly:
     field: show_promo
     value: true
+pages:
+- index.html
