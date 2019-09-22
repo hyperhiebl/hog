@@ -119,7 +119,7 @@
     }
     &-open {
         transform: translateX(0);
-        background: linear-gradient(to left, #191921 0%, #191921 90%, rgba(25, 25, 33, 0) 100%);
+        background: linear-gradient(to left, #191921 0%, #191921 90%, rgba(25, 25, 33, 0) 100%);}
 }
 
 .grey-left {
@@ -236,4 +236,13 @@
     @include respond(phone) {
         display:none;
     }
+}
+
+
+.annoucement {
+    padding:2rem;
+    text-align: center;
+    background-color: var(--main-link-color);
+    color: var(--main-bg-color);
+    font-size: var(--main-font-size);
 }

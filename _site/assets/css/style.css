@@ -312,14 +312,7 @@ p, a {
       transform: translateX(22rem); } }
   .grey-right-open {
     transform: translateX(0);
-    background: -moz-linear-gradient(right, #191921 0%, #191921 95%, rgba(25, 25, 33, 0) 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(right, #191921 0%, #191921 95%, rgba(25, 25, 33, 0) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to left, #191921 0%, #191921 95%, rgba(25, 25, 33, 0) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191921', endColorstr='#00191921',GradientType=1 );
-    /* IE6-9 */ }
+    background: linear-gradient(to left, #191921 0%, #191921 90%, rgba(25, 25, 33, 0) 100%); }
 
 .grey-left {
   left: 0;
@@ -422,6 +415,13 @@ p, a {
 @media only screen and (max-width: 37.5em) {
   .nav-elements, .owl-nav {
     display: none; } }
+
+.annoucement {
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--main-link-color);
+  color: var(--main-bg-color);
+  font-size: var(--main-font-size); }
 
 .project__img {
   width: 25%;
