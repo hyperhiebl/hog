@@ -32,7 +32,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: markdown
+      format: html-blocks
   label: about
 - name: story
   type: textarea
