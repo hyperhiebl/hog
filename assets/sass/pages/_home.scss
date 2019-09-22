@@ -10,6 +10,9 @@
 .double-wrapper {
     max-width: 70vw;
     margin: auto;
+    @include respond(phone) {
+        max-width:90vw;
+    }
 }
 
 .single-wrapper img {
