@@ -276,6 +276,9 @@ p, a {
   transform: rotate(-90deg);
   margin-top: 50vh;
   transition: all .2s ease; }
+  @media only screen and (max-width: 37.5em) {
+    .sidelink {
+      font-size: 2rem; } }
 
 .grey-left, .grey-right {
   transition: all 0.5s ease;
@@ -297,6 +300,9 @@ p, a {
 .grey-right {
   right: 0;
   transform: translateX(21rem); }
+  @media only screen and (max-width: 37.5em) {
+    .grey-right {
+      transform: translateX(22rem); } }
   .grey-right-open {
     transform: translateX(0);
     background: -moz-linear-gradient(right, #191921 0%, #191921 68%, rgba(25, 25, 33, 0) 100%);
@@ -311,6 +317,9 @@ p, a {
 .grey-left {
   left: 0;
   transform: translateX(-20rem); }
+  @media only screen and (max-width: 37.5em) {
+    .grey-left {
+      transform: translateX(-21rem); } }
   .grey-left-open {
     transform: translateX(0);
     background: -moz-linear-gradient(left, #191921 0%, #191921 68%, rgba(25, 25, 33, 0) 100%);
