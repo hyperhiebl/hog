@@ -10,9 +10,11 @@ layout: default
 	<div class="splash-landing-content">
 		<div class="btn btn-splash btn-acts">
 			<div class="btn-center"><a href="#">Act I</a><a class="btn-right" href="#">Act II</a></div></div><br>
-			{% for project in site.projects limit:1 %}
+			{% for project in site.projects %}
+			{% if forloop.last %}
 <div class="btn btn-splash"><div class="btn-center"><a href="#!{{ project.title | slugify }}" onClick="SetCookie('splashscreen','false','365')">
 					Latest page??</a></div></div>
+					{% endif %}
 					{% endfor %}
 <br><label class="container">
 	<input type="checkbox" id="cookieCheck" checked="checked">
@@ -20,7 +22,7 @@ layout: default
   </label>
 </div>
 </div>
-<div>
+<div id="main-content">
 	<div class="grey-left"><div class="clear"><p class="sidelink">Chapter</p></div><div class="inner"><ul>{% for project in site.projects %}
 			{% if project.chapter == true %}
 			<li>
@@ -163,6 +165,8 @@ $('.grey-right').click(function(){
 					console.log("cookie set!");
 				}
 				document.getElementById("splashscreen").style.display=" none";
+				document.getElementById('main-content').classList.remove('blurry');
+				document.getElementById('body').style.overflow='auto';
 				}
 			</script>
 			
@@ -174,6 +178,8 @@ $(document).ready(function(){
 }
 else {
 	document.getElementById("splashscreen").style.display="block";
+	document.getElementById('main-content').classList.add('blurry');
+	document.getElementById('body').style.overflow='hidden';
 }
 
 });

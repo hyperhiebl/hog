@@ -24,7 +24,7 @@
 
   <script src="http://localhost:4000/assets/js/main.js"></script>
 </head>
-<body>
+<body id="body">
 
 
 <div class="splash-landing" id="splashscreen">
@@ -32,8 +32,60 @@
 		<div class="btn btn-splash btn-acts">
 			<div class="btn-center"><a href="#">Act I</a><a class="btn-right" href="#">Act II</a></div></div><br>
 			
-<div class="btn btn-splash"><div class="btn-center"><a href="#!page-1" onClick="SetCookie('splashscreen','false','365')">
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+					
+			
+<div class="btn btn-splash"><div class="btn-center"><a href="#!page-145" onClick="SetCookie('splashscreen','false','365')">
 					Latest page??</a></div></div>
+					
 					
 <br><label class="container">
 	<input type="checkbox" id="cookieCheck" checked="checked">
@@ -41,7 +93,7 @@
   </label>
 </div>
 </div>
-<div>
+<div id="main-content">
 	<div class="grey-left"><div class="clear"><p class="sidelink">Chapter</p></div><div class="inner"><ul>
 			
 			<li>
@@ -509,6 +561,8 @@ $('.grey-right').click(function(){
 					console.log("cookie set!");
 				}
 				document.getElementById("splashscreen").style.display=" none";
+				document.getElementById('main-content').classList.remove('blurry');
+				document.getElementById('body').style.overflow='auto';
 				}
 			</script>
 			
@@ -520,6 +574,8 @@ $(document).ready(function(){
 }
 else {
 	document.getElementById("splashscreen").style.display="block";
+	document.getElementById('main-content').classList.add('blurry');
+	document.getElementById('body').style.overflow='hidden';
 }
 
 });

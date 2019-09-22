@@ -26,6 +26,10 @@ body {
     background-repeat: no-repeat;
 }
 
+.body {
+    overflow: hidden;
+}
+
 a:link, a:visited {
     color: var(--main-link-color);
 }
@@ -38,4 +42,5 @@ a:hover {
     background-image: url(/assets/imgs/button_bg.svg);
     padding: 4rem 5rem 4.5rem;
     background-size: 100% 100%;
+    transition: all .2s ease;
 }
