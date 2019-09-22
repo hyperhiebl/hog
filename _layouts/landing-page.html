@@ -21,7 +21,7 @@ layout: default
 </div>
 </div>
 <div>
-	<div class="grey-left"><div class="clear"><p>Chapter</p></div><div class="inner"><ul>{% for project in site.projects %}
+	<div class="grey-left"><div class="clear"><p class="sidelink">Chapter</p></div><div class="inner"><ul>{% for project in site.projects %}
 			{% if project.chapter == true %}
 			<li>
 			<a href="#!{{ project.title | slugify }}"><img class="chapter-bg" src="{{ project.chapter_bg | absolute_url }}" alt="{{ project.title }}"></a>
@@ -29,7 +29,7 @@ layout: default
 		{% endif %}
 		
 			{% endfor %}</ul></div></div>
-	<div class="grey-right"><div class="clear-left"><p>About</p></div><div class="inner inner-right">
+	<div class="grey-right"><div class="clear-left"><p class="sidelink">About</p></div><div class="inner inner-right">
 		<span>Abouuut</span>
 	</div></div>
 	<header class="header"><img src="/assets/imgs/logo.svg"><br>

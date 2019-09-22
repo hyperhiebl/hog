@@ -30,8 +30,12 @@ a:link, a:visited {
     color: var(--main-link-color);
 }
 
+a:hover {
+        color: var(--main-text-color);
+}
+
 .btn {
     background-image: url(/assets/imgs/button_bg.svg);
-    padding: 4rem 5rem;
+    padding: 4rem 5rem 4.5rem;
     background-size: 100% 100%;
 }

@@ -58,11 +58,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
 html {
   --main-bg-color: #191921;
   --text-color: #CEC5B2;
-  --main-font-family: 'Old Standard TT', serif;
-  --head-font-family: 'Lato', sans-serif;
-  --main-link-color: #907B5C;
-  --medium-font-size: 2rem;
-  --h2-font-size: 3rem;
+  --main-font-family: 'Be Vietnam', serif;
+  --head-font-family: 'Lora', sans-serif;
+  --main-link-color: #907b5c;
+  --medium-font-size: 3rem;
+  --h2-font-size: 4.5rem;
   --main-font-size: 1.8rem;
   --h2-margin-bottom: 1rem; }
 
@@ -92,9 +92,12 @@ body {
 a:link, a:visited {
   color: var(--main-link-color); }
 
+a:hover {
+  color: var(--main-text-color); }
+
 .btn {
   background-image: url(/assets/imgs/button_bg.svg);
-  padding: 4rem 5rem;
+  padding: 4rem 5rem 4.5rem;
   background-size: 100% 100%; }
 
 p, a {
@@ -188,13 +191,16 @@ p, a {
 
 .header {
   text-align: center;
-  margin: 0 0 5rem; }
+  margin: 0 0 5rem;
+  transition: color .2s ease; }
   .header img {
     max-width: 40rem;
     margin-bottom: 2rem; }
   .header a:link, .header a:visited {
     color: var(--main-bg-color);
     text-decoration: none; }
+  .header a:hover {
+    color: var(--main-text-color); }
 
 .single-wrapper {
   max-width: 50vw;
@@ -247,9 +253,14 @@ p, a {
   right: 0;
   position: absolute; }
 
-.grey-left, .grey-right {
+.sidelink {
   font-family: var(--head-font-family);
-  text-transform: uppercase;
+  font-size: var(--medium-font-size);
+  transform: rotate(-90deg);
+  margin-top: 50vh;
+  transition: all .2s ease; }
+
+.grey-left, .grey-right {
   transition: all 0.5s ease;
   position: fixed;
   height: 100vh;
@@ -258,10 +269,8 @@ p, a {
   top: 0;
   z-index: 999;
   cursor: pointer; }
-  .grey-left p, .grey-right p {
-    font-size: var(--medium-font-size);
-    transform: rotate(-90deg);
-    margin-top: 50vh; }
+  .grey-left:hover .sidelink, .grey-right:hover .sidelink {
+    color: var(--main-link-color); }
   .grey-left ul, .grey-right ul {
     list-style: none; }
 
@@ -301,7 +310,9 @@ p, a {
   text-align: center; }
   .page-content h2 {
     font-size: var(--h2-font-size);
-    margin-bottom: var(--h2-margin-bottom); }
+    margin-bottom: var(--h2-margin-bottom);
+    font-family: var(--head-font-family);
+    font-weight: normal; }
   .page-content p {
     font-size: var(--main-font-size); }
 
