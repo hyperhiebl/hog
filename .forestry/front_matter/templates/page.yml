@@ -16,4 +16,5 @@ fields:
       format: html-blocks
   label: content
 pages:
+- privacy-policy.html
 - imprint.html

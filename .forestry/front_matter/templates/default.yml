@@ -23,5 +23,3 @@ fields:
   label: layout
   hidden: true
   default: post
-pages:
-- privacy-policy.html
