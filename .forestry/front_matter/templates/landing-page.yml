@@ -48,6 +48,9 @@ fields:
   config:
     required: false
   label: promo
+  showOnly:
+    field: show_promo
+    value: true
 - name: show_promo
   type: boolean
   label: show promo?
