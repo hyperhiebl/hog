@@ -32,6 +32,8 @@ body {
 
 a:link, a:visited {
     color: var(--main-link-color);
+    text-decoration: none;
+    transition: all .2s ease;
 }
 
 a:hover {
