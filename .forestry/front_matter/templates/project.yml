@@ -14,7 +14,7 @@ fields:
       format: markdown
 - name: date
   type: datetime
-  label: date
+  label: Veröffentlichungsdatum
   description: ''
   config:
     required: false
