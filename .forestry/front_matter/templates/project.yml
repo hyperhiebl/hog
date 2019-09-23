@@ -4,7 +4,16 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: Title
+  label: Page Nummer
+- name: visible_title
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Sichtbarer Titel
 - type: textarea
   name: beschreibung
   label: Beschreibung
