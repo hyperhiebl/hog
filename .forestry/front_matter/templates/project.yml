@@ -52,6 +52,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _projects/page-22.html
 - _projects/page-21.html
 - _projects/page-20.html
 - _projects/page-19.html
