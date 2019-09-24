@@ -53,6 +53,7 @@ fields:
   default: ''
 pages:
 - _projects/page-15.html
+- _projects/page-16.html
 - _projects/page-14.html
 - _projects/page-13.html
 - _projects/page-11.html
