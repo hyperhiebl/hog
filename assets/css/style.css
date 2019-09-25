@@ -61,7 +61,7 @@ html {
   --main-font-family: 'Be Vietnam', serif;
   --head-font-family: 'Lora', sans-serif;
   --main-link-color: #907b5c;
-  --medium-font-size: 3rem;
+  --medium-font-size: 2.3rem;
   --h2-font-size: 4.5rem;
   --main-font-size: 1.8rem;
   --h2-margin-bottom: 1rem; }
@@ -206,7 +206,7 @@ p, a {
   margin: 2rem 0 5rem;
   transition: color .2s ease; }
   .header img {
-    max-width: 35rem;
+    max-width: 40rem;
     margin-bottom: 4rem; }
   .header a:link, .header a:visited {
     color: var(--main-bg-color);
@@ -278,11 +278,11 @@ p, a {
   position: absolute; }
 
 .sidelink {
-  font-family: var(--head-font-family);
   font-size: var(--medium-font-size);
   transform: rotate(-90deg);
   margin-top: 50vh;
-  transition: all .2s ease; }
+  transition: all .2s ease;
+  text-transform: uppercase; }
   @media only screen and (max-width: 37.5em) {
     .sidelink {
       font-size: 2rem; } }

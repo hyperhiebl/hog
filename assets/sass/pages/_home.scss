@@ -75,11 +75,11 @@
 }
 
 .sidelink {
-    font-family: var(--head-font-family);
     font-size: var(--medium-font-size);
     transform: rotate(-90deg);
     margin-top: 50vh;
     transition: all .2s ease;
+    text-transform: uppercase;
     @include respond(phone) {
         font-size: 2rem;
     }
