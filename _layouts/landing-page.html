@@ -53,7 +53,7 @@ layout: default
 		<div data-hash="!{{ project.title | slugify }}" class="{% if project.doublepage == true %}double-wrapper{% else %}single-wrapper{% endif %}">
 				<img class="owl-lazy" data-src="{{ project.banner_image | absolute_url }}" alt="{{ project.title }}">
 			<div class="page-content">
-				<h2>{{ project.title }}</h2>
+				<h2>{{ project.visible_title }}</h2>
 			<p>{{ project.beschreibung }}</p>
 		</div>
 			</div>
