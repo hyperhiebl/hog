@@ -309,7 +309,7 @@ p, a {
   transform: translateX(60rem); }
   @media only screen and (max-width: 37.5em) {
     .grey-right {
-      transform: translateX(22rem); } }
+      transform: translateX(63rem); } }
   .grey-right-open {
     transform: translateX(0);
     background: linear-gradient(to left, #191921 0%, #191921 60rem, rgba(25, 25, 33, 0) 100%); }
