@@ -18,7 +18,7 @@ layout: default
 			<div class="btn-center"><a href="#!page-1" onClick="SetCookie('splash','true','365')">Act I</a><a class="btn-right" href="#!page-159" onClick="SetCookie('splash','true','365')">Act II</a></div></div><br>
 			{% for project in site.projects %}
 			{% if forloop.last %}
-<div class="btn btn-splash"><div class="btn-center"><a href="#!{{ project.title | slugify }}" onClick="SetCookie('splashscreen','false','365')">
+<div class="btn btn-splash"><div class="btn-center"><a href="#!{{ page.start_page }}" onClick="SetCookie('splashscreen','false','365')">
 					Latest Update</a></div></div>
 					{% endif %}
 					{% endfor %}
@@ -180,14 +180,7 @@ $('.grey-right').click(function(){
 				}
 			</script>
 
-<script>function removeBlur() {
-	console.log("remove");
-	document.getElementById("splashscreen").style.display=" none";
-	document.getElementById('main-content').classList.remove('blurry');
-	document.getElementById('body').style.overflow='auto';
-	}
-</script>
-			
+
 <script>
 $(document).ready(function(){  
 
