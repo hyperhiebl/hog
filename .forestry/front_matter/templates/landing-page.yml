@@ -14,7 +14,7 @@ fields:
   config:
     source:
       type: pages
-      section: projects
+      section: comic-pages
   label: Startseite
   name: startseite
   description: Die Seite, die beim aufrufen von heartofgoldcomic.com als erstes angezeigt
