@@ -1,20 +1,27 @@
+---
 title: Heart of Gold
-short_title: hog
-description: Web Graphic Novel Heart of Gold by Eli Baum and Viv Tanner
-baseurl:
-permalink: "/:path/"
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: page
+timezone: UTC
 collections:
+  posts:
+    title: Posts
+    output: true
   projects:
+    title: Projects
     output: true
     permalink: "/projects/:path/"
-# tag_page_layout: tag_page
-# tag_page_dir: tag
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+  values:
+    layout: page
+short_title: hog
+description: Web Graphic Novel Heart of Gold by Eli Baum and Viv Tanner
+baseurl: 
+permalink: "/:path/"
 gems:
-  - jekyll-menus
-  - jekyll-feed
-  - jekyll-archives
+- jekyll-menus
+- jekyll-feed
+- jekyll-archives
