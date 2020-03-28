@@ -87,7 +87,8 @@ body {
   color: var(--text-color);
   background-image: url("/assets/imgs/bg.png");
   background-size: contain;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  height: 100%; }
 
 .body {
   overflow: hidden; }
@@ -260,7 +261,6 @@ p, a {
   text-align: left;
   width: 20rem;
   margin-right: 8rem;
-  top: 20vh;
   position: relative;
   padding: 3rem; }
 
@@ -270,8 +270,9 @@ p, a {
   width: 60rem;
   font-size: var(--main-font-size); }
 
-.nav-last {
-  right: 0; }
+.carousel-last {
+  right: 0;
+  background: url("/assets/imgs/arrowlatest.svg"); }
 
 .owl-next {
   right: 0;
@@ -290,7 +291,7 @@ p, a {
 .grey-left, .grey-right {
   transition: all 0.5s ease;
   position: fixed;
-  height: 100vh;
+  height: 100%;
   text-align: center;
   bottom: 0;
   top: 0;
@@ -300,6 +301,9 @@ p, a {
     color: var(--main-link-color); }
   .grey-left ul, .grey-right ul {
     list-style: none; }
+
+#main-content .grey-scroll {
+  position: absolute; }
 
 .chapter-bg {
   max-width: 100%; }
@@ -350,10 +354,23 @@ p, a {
   min-height: 40vh; }
 
 .carousel-nav {
-  width: 6rem; }
+  width: 6rem;
+  height: 6rem; }
+
+.carousel-first {
+  background: url("/assets/imgs/arrowfirst.svg"); }
 
 .owl-prev, .owl-next {
-  width: 4rem; }
+  width: 4rem;
+  height: 8rem; }
+
+.owl-nav .owl-prev {
+  background: url("/assets/imgs/arrowback.svg");
+  background-repeat: no-repeat; }
+
+.owl-nav .owl-next {
+  background: url("/assets/imgs/arrowforward.svg");
+  background-repeat: no-repeat; }
 
 #disqus_thread {
   max-width: 40vw;

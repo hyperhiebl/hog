@@ -31,21 +31,21 @@ layout: default
 </div>
 -->
 <div id="main-content">
-	<div class="grey-left"><div class="clear"><p class="sidelink">Chapter</p></div><div class="inner"><ul>{% for project in site.projects %}
+	<section class="grey-left"><div class="clear"><p class="sidelink">Chapter</p></div><div class="inner"><ul>{% for project in site.projects %}
 			{% if project.chapter == true %}
 			<li>
 			<a href="#!{{ project.title | slugify }}"><img class="chapter-bg" src="{{ project.chapter_bg | absolute_url }}" alt="{{ project.title }}"></a>
 		</li>
 		{% endif %}
 		
-			{% endfor %}</ul></div></div>
-	<div class="grey-right"><div class="clear-left"><p class="sidelink">About</p></div><div class="inner inner-right">
+			{% endfor %}</ul></div></section>
+	<section class="grey-right"><div class="clear-left"><p class="sidelink">About</p></div><div class="inner inner-right">
 		<h3>Story</h3>
 		<div class="u-margin-bottom-medium">{{ page.story }}</div>
 
 		<h3>About</h3>
 		{{ page.about }}
-	</div></div>
+	</div></section>
 	<header class="header"><img src="/assets/imgs/logo.svg"><br>
 		<a class="btn" href="https://www.patreon.com/heartofgoldcomic" target="_blank">Bonus Content on Patreon</a>
 	
@@ -66,12 +66,12 @@ layout: default
 		<div class="nav-first-last nav-elements">
 
 		{% for project in site.projects limit:1 %}
-<a class="carousel-nav" href="#!{{ project.title | slugify }}"><img src="/assets/imgs/arrowfirst.svg"></a>
+<a class="carousel-nav carousel-first" href="#!{{ project.title | slugify }}"></a>
 {% endfor %}
 
 {% for project in site.projects %}
 {% if forloop.last %}
-<a href="#!{{ project.title | slugify }}" class="nav-last carousel-nav"><img src="/assets/imgs/arrowlatest.svg"></a>
+<a href="#!{{ project.title | slugify }}" class="carousel-last carousel-nav"></a>
 {% endif %}
 {% endfor %}
 
@@ -79,23 +79,7 @@ layout: default
 
 		<div id="disqus_thread"></div>
 		<script>
-		var section = $(".grey-left").height();
-		var win = $(window).height();
-		var sectionright = $(".grey-right").height();
 
-$('.grey-left').click(function(){
-    jQuery(this).toggleClass('grey-left-open');
-    if (section > win ) {
-        $(".grey-left").toggleClass('grey-left-scroll');
-    }
-});
-
-$('.grey-right').click(function(){
-    jQuery(this).toggleClass('grey-right-open');
-    if (sectionright > win ) {
-        $(".grey-right").toggleClass('grey-left-scroll');
-    }
-});
 </script>
 		<script>function removeHash () { 
 				history.pushState("", document.title, window.location.pathname + window.location.search);
@@ -149,7 +133,7 @@ $('.grey-right').click(function(){
         URLhashListener:true,
 		startPosition: URLHash,
 		autoHeight:true,
-		navText: ["<img src='/assets/imgs/arrowback.svg'>","<img src='/assets/imgs/arrowforward.svg'>"]
+		navText: ["",""]
 			});
 			$(document.documentElement).keyup(function(event) {    
         if (event.keyCode == 37) { /*left key*/
@@ -181,7 +165,6 @@ $('.grey-right').click(function(){
 				document.getElementById('body').style.overflow='auto';
 				}
 			</script>
-
 
 <script>
 $(document).ready(function(){  
